@@ -29,7 +29,7 @@ export default function UploadForm() {
 
       // Send URL to backend
       const { data } = await api.post(
-        "/videos/upload",
+        "/api/videos/publish",
         {
           videoUrl: cloudinary.secure_url,
           caption,
