@@ -173,17 +173,17 @@ export default function Dashboard() {
     <DashboardLayout>
 
       
-        <div className="flex items-center gap-5">
-          
-        <h1 className="text-4xl font-bold mb-10">
+        <div className="flex items-center gap-5 mb-5">
+
+        {/* <h1 className="text-4xl font-bold mb-10">
 
           Welcome
-        </h1>
+        </h1> */}
 
           <img
             src={user?.avatar}
             alt={user?.displayName}
-            className="w-20 h-20 rounded-full"
+            className="w-15 h-15 rounded-full"
           />
 
           <div>
