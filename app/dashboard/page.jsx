@@ -37,6 +37,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "@/services/axios";
+import Link from "next/link";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -83,6 +84,7 @@ export default function Dashboard() {
 
   return (
     <main className="max-w-5xl mx-auto p-10">
+      <div className="flex items-center justify-around">
       <div className="flex items-center gap-5">
 
         <img
@@ -107,6 +109,13 @@ export default function Dashboard() {
       >
         Logout
       </button>
+      </div>
+      <Link
+        href="/upload"
+        className="bg-blue-600 text-white px-5 py-2 rounded-lg"
+      >
+        Upload Video
+      </Link>
     </main>
   );
 }
