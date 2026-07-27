@@ -162,7 +162,7 @@ export default function Dashboard() {
 
     setUser(me.data.user);
 
-    const list = await api.get("/videos");
+    const list = await api.get("/api/videos/");
 
     setVideos(list.data.videos);
 
