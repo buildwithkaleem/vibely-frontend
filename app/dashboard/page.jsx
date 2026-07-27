@@ -158,7 +158,7 @@ export default function Dashboard() {
 
   async function load() {
 
-    const me = await api.get("/auth/me");
+    const me = await api.get("api/users/me");
 
     setUser(me.data.user);
 
