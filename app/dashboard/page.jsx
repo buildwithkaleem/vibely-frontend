@@ -187,11 +187,11 @@ export default function Dashboard() {
           />
 
           <div>
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-3xl font-bold mb-2">
               {user?.displayName}
             </h1>
 
-            {/* <p>{user.openId}</p> */}
+            <p>{user.openId}</p>
           </div>
 
         </div>
