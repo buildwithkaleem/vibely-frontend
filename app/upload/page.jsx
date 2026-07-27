@@ -15,7 +15,7 @@ export default function UploadPage() {
     setLoading(true);
 
     try {
-      const { data } = await api.post("/videos/upload", {
+      const { data } = await api.post("/api/videos/publish", {
         videoUrl,
         caption,
       });
