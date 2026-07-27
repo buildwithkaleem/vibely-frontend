@@ -191,7 +191,7 @@ export default function Dashboard() {
               {user?.displayName}
             </h1>
 
-            <p>{user.openId}</p>
+            <p>{user?.openId}</p>
           </div>
 
         </div>
