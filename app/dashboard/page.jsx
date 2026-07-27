@@ -172,10 +172,13 @@ export default function Dashboard() {
 
     <DashboardLayout>
 
-      <h1 className="text-4xl font-bold mb-10">
-
-        Welcome
+      
         <div className="flex items-center gap-5">
+          
+        <h1 className="text-4xl font-bold mb-10">
+
+          Welcome
+        </h1>
 
           <img
             src={user?.avatar}
@@ -192,9 +195,9 @@ export default function Dashboard() {
           </div>
 
         </div>
-        {/* {user?.displayName} */}
 
-      </h1>
+
+     
 
       <div className="grid md:grid-cols-3 gap-6">
 
