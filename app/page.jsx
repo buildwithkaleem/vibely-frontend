@@ -35,21 +35,141 @@
 //       </div>
 //     </main>
 //   );
-// }
+//
 
 
 
 
+
+// import Link from "next/link";
 
 // export default function Home() {
 //   return (
-//     <main className="flex min-h-screen items-center justify-center">
-//       <a
-//         href="https://vibely-api.egrif.online/api/auth/login"
-//         className="rounded bg-black px-6 py-3 text-white"
-//       >
-//         Continue with TikTok
-//       </a>
+//     <main className="min-h-screen bg-white">
+
+//       <header className="border-b">
+
+//         <div className="max-w-7xl mx-auto flex items-center justify-between py-5 px-6">
+
+//           <h1 className="text-3xl font-bold">
+//             Vibely
+//           </h1>
+
+//           <nav className="flex gap-8">
+
+//             <Link href="/">Home</Link>
+
+//             <Link href="/about">About</Link>
+
+//             <Link href="/privacy-policy">
+//               Privacy
+//             </Link>
+
+//             <Link href="/terms-of-service">
+//               Terms
+//             </Link>
+
+//             <Link href="/contact">
+//               Contact
+//             </Link>
+
+//           </nav>
+
+//         </div>
+
+//       </header>
+
+//       <section className="max-w-6xl mx-auto text-center py-28 px-6">
+
+//         <h2 className="text-6xl font-bold">
+
+//           Publish TikTok Videos
+
+//           <br />
+
+//           Faster Than Ever
+
+//         </h2>
+
+//         <p className="text-xl text-gray-600 mt-8 max-w-3xl mx-auto">
+
+//           Vibely helps creators upload videos to TikTok securely using the official TikTok API.
+
+//         </p>
+
+//         <a
+//           href="https://vibely-api.egrif.online/api/auth/login"
+//           className="inline-block mt-10 bg-black text-white px-8 py-4 rounded-xl text-lg"
+//         >
+//           Continue with TikTok
+//         </a>
+
+//       </section>
+
+//       <section className="max-w-6xl mx-auto py-20 grid md:grid-cols-3 gap-8">
+
+//         <div className="border rounded-xl p-8">
+
+//           <h3 className="text-2xl font-bold">
+//             Secure Login
+//           </h3>
+
+//           <p className="mt-4 text-gray-600">
+//             Official TikTok OAuth authentication.
+//           </p>
+
+//         </div>
+
+//         <div className="border rounded-xl p-8">
+
+//           <h3 className="text-2xl font-bold">
+//             Cloud Upload
+//           </h3>
+
+//           <p className="mt-4 text-gray-600">
+//             Upload videos through Cloudinary with fast delivery.
+//           </p>
+
+//         </div>
+
+//         <div className="border rounded-xl p-8">
+
+//           <h3 className="text-2xl font-bold">
+//             Official API
+//           </h3>
+
+//           <p className="mt-4 text-gray-600">
+//             Uses TikTok's official Content Posting API.
+//           </p>
+
+//         </div>
+
+//       </section>
+
+//       <footer className="border-t">
+
+//         <div className="max-w-6xl mx-auto py-10 flex flex-wrap gap-8 justify-center">
+
+//           <Link href="/about">
+//             About
+//           </Link>
+
+//           <Link href="/privacy-policy">
+//             Privacy Policy
+//           </Link>
+
+//           <Link href="/terms-of-service">
+//             Terms of Service
+//           </Link>
+
+//           <Link href="/contact">
+//             Contact
+//           </Link>
+
+//         </div>
+
+//       </footer>
+
 //     </main>
 //   );
 // }
@@ -57,135 +177,25 @@
 
 
 
-import Link from "next/link";
+
+import Hero from "@/components/home/Hero";
+import Features from "@/components/home/Features";
+import HowItWorks from "@/components/home/HowItWorks";
+import WhyChoose from "@/components/home/WhyChoose";
+import FAQ from "@/components/home/FAQ";
+import CTA from "@/components/home/CTA";
+import Footer from "@/components/home/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-
-      <header className="border-b">
-
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-5 px-6">
-
-          <h1 className="text-3xl font-bold">
-            Vibely
-          </h1>
-
-          <nav className="flex gap-8">
-
-            <Link href="/">Home</Link>
-
-            <Link href="/about">About</Link>
-
-            <Link href="/privacy-policy">
-              Privacy
-            </Link>
-
-            <Link href="/terms-of-service">
-              Terms
-            </Link>
-
-            <Link href="/contact">
-              Contact
-            </Link>
-
-          </nav>
-
-        </div>
-
-      </header>
-
-      <section className="max-w-6xl mx-auto text-center py-28 px-6">
-
-        <h2 className="text-6xl font-bold">
-
-          Publish TikTok Videos
-
-          <br />
-
-          Faster Than Ever
-
-        </h2>
-
-        <p className="text-xl text-gray-600 mt-8 max-w-3xl mx-auto">
-
-          Vibely helps creators upload videos to TikTok securely using the official TikTok API.
-
-        </p>
-
-        <a
-          href="https://vibely-api.egrif.online/api/auth/login"
-          className="inline-block mt-10 bg-black text-white px-8 py-4 rounded-xl text-lg"
-        >
-          Continue with TikTok
-        </a>
-
-      </section>
-
-      <section className="max-w-6xl mx-auto py-20 grid md:grid-cols-3 gap-8">
-
-        <div className="border rounded-xl p-8">
-
-          <h3 className="text-2xl font-bold">
-            Secure Login
-          </h3>
-
-          <p className="mt-4 text-gray-600">
-            Official TikTok OAuth authentication.
-          </p>
-
-        </div>
-
-        <div className="border rounded-xl p-8">
-
-          <h3 className="text-2xl font-bold">
-            Cloud Upload
-          </h3>
-
-          <p className="mt-4 text-gray-600">
-            Upload videos through Cloudinary with fast delivery.
-          </p>
-
-        </div>
-
-        <div className="border rounded-xl p-8">
-
-          <h3 className="text-2xl font-bold">
-            Official API
-          </h3>
-
-          <p className="mt-4 text-gray-600">
-            Uses TikTok's official Content Posting API.
-          </p>
-
-        </div>
-
-      </section>
-
-      <footer className="border-t">
-
-        <div className="max-w-6xl mx-auto py-10 flex flex-wrap gap-8 justify-center">
-
-          <Link href="/about">
-            About
-          </Link>
-
-          <Link href="/privacy-policy">
-            Privacy Policy
-          </Link>
-
-          <Link href="/terms-of-service">
-            Terms of Service
-          </Link>
-
-          <Link href="/contact">
-            Contact
-          </Link>
-
-        </div>
-
-      </footer>
-
-    </main>
+    <>
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <WhyChoose />
+      <FAQ />
+      <CTA />
+      <Footer />
+    </>
   );
 }
