@@ -84,7 +84,7 @@ export default function Dashboard() {
 
   return (
     <main className="max-w-5xl mx-auto p-10">
-      <div className="flex items-center justify-around">
+      <div className="flex items-center justify-around gap-10">
       <div className="flex items-center gap-5">
 
         <img
@@ -112,7 +112,7 @@ export default function Dashboard() {
       </div>
       <Link
         href="/upload"
-        className="bg-blue-600 text-white px-5 py-2 rounded-lg"
+        className="bg-blue-600 text-white mt-10 px-5 py-2 rounded-lg"
       >
         Upload Video
       </Link>
