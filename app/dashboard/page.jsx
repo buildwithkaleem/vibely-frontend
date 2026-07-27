@@ -112,22 +112,93 @@
 
 
 
+// "use client";
+
+// import DashboardLayout from "@/components/layout/DashboardLayout";
+
+// export default function Dashboard() {
+//   return (
+//     <DashboardLayout>
+
+//       <h1 className="text-4xl font-bold">
+//         Dashboard
+//       </h1>
+
+//       <p className="mt-4">
+//         Welcome to Vibely
+//       </p>
+
+//     </DashboardLayout>
+//   );
+// }
+
+
+
+
+
+
+
 "use client";
 
+import { useEffect, useState } from "react";
 import DashboardLayout from "@/components/layout/DashboardLayout";
+import StatCard from "@/components/dashboard/StatCard";
+import api from "@/services/axios";
 
 export default function Dashboard() {
+
+  const [user, setUser] = useState(null);
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+
+    load();
+
+  }, []);
+
+  async function load() {
+
+    const me = await api.get("/auth/me");
+
+    setUser(me.data.user);
+
+    const list = await api.get("/videos");
+
+    setVideos(list.data.videos);
+
+  }
+
   return (
+
     <DashboardLayout>
 
-      <h1 className="text-4xl font-bold">
-        Dashboard
+      <h1 className="text-4xl font-bold mb-10">
+
+        Welcome {user?.displayName}
+
       </h1>
 
-      <p className="mt-4">
-        Welcome to Vibely
-      </p>
+      <div className="grid md:grid-cols-3 gap-6">
+
+        <StatCard
+          title="Total Videos"
+          value={videos.length}
+        />
+
+        <StatCard
+          title="TikTok"
+          value="Connected"
+        />
+
+        <StatCard
+          title="Draft Status"
+          value="Ready"
+        />
+
+      </div>
 
     </DashboardLayout>
+
   );
+
 }
