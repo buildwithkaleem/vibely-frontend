@@ -110,12 +110,14 @@ export default function Dashboard() {
         Logout
       </button>
       </div>
+      <div className="mt-14">
       <Link
         href="/upload"
-        className="bg-blue-600 text-white mt-10 px-5 py-2 rounded-lg"
+        className="bg-blue-600 text-white px-5 py-2 rounded-lg"
       >
         Upload Video
       </Link>
+      </div>
     </main>
   );
 }
