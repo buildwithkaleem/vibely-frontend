@@ -178,14 +178,14 @@ export default function Dashboard() {
         <div className="flex items-center gap-5">
 
           <img
-            src={user.avatar}
-            alt={user.displayName}
+            src={user?.avatar}
+            alt={user?.displayName}
             className="w-20 h-20 rounded-full"
           />
 
           <div>
             <h1 className="text-3xl font-bold">
-              {user.displayName}
+              {user?.displayName}
             </h1>
 
             {/* <p>{user.openId}</p> */}
