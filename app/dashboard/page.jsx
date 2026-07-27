@@ -57,7 +57,7 @@ export default function Dashboard() {
 
   const getProfile = async () => {
     try {
-      const { data } = await api.get("/auth/me");
+      const { data } = await api.get("/users/me");
 
       setUser(data.user);
     } catch (error) {
