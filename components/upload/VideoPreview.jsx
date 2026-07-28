@@ -41,13 +41,13 @@ function VideoPreview({ file }) {
   if (!previewUrl) return null;
 
   return (
-    <div className="mt-5 max-h-sm">
+    <span className="mt-5">
       <video
         src={previewUrl}
         controls
         className="w-full max-w-md rounded-xl border object-contain bg-black"
       />
-    </div>
+    </span>
 
     // <video
     //   src={previewUrl}
