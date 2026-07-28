@@ -53,7 +53,7 @@ export default function VideoRow({
 
         </td>
 
-        <td className="p-4 flex gap-3">
+        <td className="p-4 flex items-center gap-3">
 
           <button
             onClick={() =>
