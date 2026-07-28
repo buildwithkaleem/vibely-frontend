@@ -32,15 +32,43 @@
 
 
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/home/Footer";
+// import Navbar from "@/components/layout/Navbar";
+// import Footer from "@/components/home/Footer";
+// import "./globals.css";
+
+// export const metadata = {
+//   title: "Vibely",
+//   description:
+//     "Publish TikTok videos securely using the official TikTok Content Posting API.",
+// };
+
+// export default function RootLayout({
+//   children,
+// }) {
+//   return (
+//     <html lang="en">
+
+//       <body>
+
+//         <Navbar />
+
+//         {children}
+
+//         <Footer />
+
+//       </body>
+
+//     </html>
+//   );
+// }
+
+
+
+
+
 import "./globals.css";
 
-export const metadata = {
-  title: "Vibely",
-  description:
-    "Publish TikTok videos securely using the official TikTok Content Posting API.",
-};
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function RootLayout({
   children,
@@ -50,11 +78,11 @@ export default function RootLayout({
 
       <body>
 
-        <Navbar />
+        <AuthProvider>
 
-        {children}
+          {children}
 
-        <Footer />
+        </AuthProvider>
 
       </body>
 
