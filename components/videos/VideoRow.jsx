@@ -19,7 +19,7 @@ export default function VideoRow({
 
     <>
 
-      <tr className="border-t">
+      <tr className="border-t ">
 
         <td className="p-4">
 

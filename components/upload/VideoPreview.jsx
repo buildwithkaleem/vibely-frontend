@@ -45,7 +45,7 @@ function VideoPreview({ file }) {
       <video
         src={previewUrl}
         controls
-        className="w-full max-w-md aspect-video rounded-xl border object-cover"
+        className="w-full max-w-md aspect-video rounded-xl border object-contain"
       />
     </div>
   );
