@@ -41,22 +41,22 @@ function VideoPreview({ file }) {
   if (!previewUrl) return null;
 
   return (
-    // <div className="mt-5">
-    //   <video
-    //     src={previewUrl}
-    //     controls
-    //     className="w-full max-w-md aspect-video rounded-xl border object-contain"
-    //   />
-    // </div>
+    <div className="mt-5">
+      <video
+        src={previewUrl}
+        controls
+        className="w-full max-w-md rounded-xl border object-contain bg-black"
+      />
+    </div>
 
-    <video
-      src={previewUrl}
-      controls
-      className="w-full max-w-sm rounded-xl border bg-black"
-      style={{
-        maxHeight: "320px",
-      }}
-    />
+    // <video
+    //   src={previewUrl}
+    //   controls
+    //   className="w-full max-w-sm rounded-xl border bg-black"
+    //   style={{
+    //     maxHeight: "320px",
+    //   }}
+    // />
   );
 }
 
