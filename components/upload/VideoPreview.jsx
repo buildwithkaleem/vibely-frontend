@@ -6,7 +6,8 @@ export default function VideoPreview({
   return (
     <video
       controls
-      className="rounded-lg mt-5"
+      // className="rounded-lg "
+      className="w-full mt-5 max-w-sm h-64 object-cover rounded-xl border"
       src={URL.createObjectURL(file)}
     />
   );
