@@ -34,6 +34,7 @@
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/home/Footer";
+import "./globals.css";
 
 export const metadata = {
   title: "Vibely",
