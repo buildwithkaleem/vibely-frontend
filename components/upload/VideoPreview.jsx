@@ -1,14 +1,54 @@
-export default function VideoPreview({
-  file,
-}) {
-  if (!file) return null;
+// export default function VideoPreview({
+//   file,
+// }) {
+//   if (!file) return null;
+
+//   return (
+//     <video
+//       controls
+//       className="rounded-lg mt-5"
+//       src={URL.createObjectURL(file)}
+//     />
+//   );
+// }
+
+
+
+
+
+"use client";
+
+import { memo, useEffect, useState } from "react";
+
+function VideoPreview({ file }) {
+  const [previewUrl, setPreviewUrl] = useState("");
+
+  useEffect(() => {
+    if (!file) {
+      setPreviewUrl("");
+      return;
+    }
+
+    const url = URL.createObjectURL(file);
+
+    setPreviewUrl(url);
+
+    return () => {
+      URL.revokeObjectURL(url);
+    };
+  }, [file]);
+
+  if (!previewUrl) return null;
 
   return (
-    <video
-      controls
-      // className="rounded-lg "
-      className="w-full mt-5 max-w-sm h-64 object-cover rounded-xl border"
-      src={URL.createObjectURL(file)}
-    />
+    <div className="mt-5">
+      <video
+        src={previewUrl}
+        controls
+        className="w-full max-w-md aspect-video rounded-xl border object-cover"
+      />
+    </div>
   );
 }
+
+export default memo(VideoPreview);

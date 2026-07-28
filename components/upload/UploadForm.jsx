@@ -58,12 +58,25 @@ export default function UploadForm() {
   return (
     <div className="bg-white rounded-xl shadow p-6">
 
-      <input
+      {/* <input
         type="file"
         accept="video/*"
         onChange={(e) =>
           setFile(e.target.files[0])
         }
+      /> */}
+
+      <input
+        type="file"
+        accept="video/*"
+        onChange={(e) => {
+          const selected = e.target.files?.[0];
+
+          if (selected) {
+            setFile(selected);
+            setProgress(0);
+          }
+        }}
       />
 
       <VideoPreview file={file} />
