@@ -206,17 +206,19 @@
 
 "use client";
 
-import DashboardLayout from "@/components/layout/DashboardLayout";
+// import DashboardLayout from "@/components/layout/DashboardLayout";
 import UploadForm from "@/components/upload/UploadForm";
 
 export default function UploadPage() {
   return (
-    <DashboardLayout>
+    // <DashboardLayout>
+    <>
       <h1 className="text-3xl font-bold mb-8">
         Upload Video
       </h1>
 
       <UploadForm />
-    </DashboardLayout>
+    </>
+    // </DashboardLayout>
   );
 }

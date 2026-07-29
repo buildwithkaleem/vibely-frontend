@@ -16,18 +16,18 @@ const links = [
     name: "Videos",
     href: "/videos",
   },
-  {
-    name: "Privacy",
-    href: "/privacy-policy",
-  },
-  {
-    name: "Terms",
-    href: "/terms-of-service",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
+  // {
+  //   name: "Privacy",
+  //   href: "/privacy-policy",
+  // },
+  // {
+  //   name: "Terms",
+  //   href: "/terms-of-service",
+  // },
+  // {
+  //   name: "Contact",
+  //   href: "/contact",
+  // },
 ];
 
 export default function Sidebar() {

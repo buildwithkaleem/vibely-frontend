@@ -141,7 +141,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DashboardLayout from "@/components/layout/DashboardLayout";
+// import DashboardLayout from "@/components/layout/DashboardLayout";
 import StatCard from "@/components/dashboard/StatCard";
 import api from "@/services/axios";
 
@@ -170,9 +170,9 @@ export default function Dashboard() {
 
   return (
 
-    <DashboardLayout>
+    // <DashboardLayout>
 
-      
+      <>
         <div className="flex items-center gap-5 mb-5">
 
         {/* <h1 className="text-4xl font-bold mb-10">
@@ -217,8 +217,8 @@ export default function Dashboard() {
         />
 
       </div>
-
-    </DashboardLayout>
+    </>
+    // </DashboardLayout> 
 
   );
 

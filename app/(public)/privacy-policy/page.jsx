@@ -1,8 +1,8 @@
-import DashboardLayout from "@/components/layout/DashboardLayout";
+// import DashboardLayout from "@/components/layout/DashboardLayout";
 
 export default function PrivacyPolicy() {
   return (
-    <DashboardLayout>
+    // <DashboardLayout>
     <main className="max-w-5xl mx-auto px-6 py-12">
 
       <h1 className="text-4xl font-bold mb-8">
@@ -85,6 +85,6 @@ export default function PrivacyPolicy() {
       </section>
 
     </main>
-    </DashboardLayout>
+    // </DashboardLayout>
   );
 }

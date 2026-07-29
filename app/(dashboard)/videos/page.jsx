@@ -80,7 +80,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DashboardLayout from "@/components/layout/DashboardLayout";
+// import DashboardLayout from "@/components/layout/DashboardLayout";
 import VideoTable from "@/components/videos/VideoTable";
 import { getVideos } from "@/services/video.service";
 
@@ -104,8 +104,8 @@ export default function VideosPage() {
   }, []);
 
   return (
-    <DashboardLayout>
-
+    // <DashboardLayout>
+    <>
       <h1 className="text-3xl font-bold mb-8">
         My Videos
       </h1>
@@ -115,7 +115,7 @@ export default function VideosPage() {
         loading={loading}
         refresh={loadVideos}
       />
-
-    </DashboardLayout>
+</>
+    // </DashboardLayout>
   );
 }
