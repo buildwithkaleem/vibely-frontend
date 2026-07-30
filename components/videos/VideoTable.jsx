@@ -115,9 +115,9 @@ export default function VideoTable({
               <th
                 key={item}
                 className={`py-4 font-semibold text-gray-700 ${item === "Preview"
-                  ? "text-left pl-8"
+                  ? "text-left pl-12"
                   : item === "Caption"
-                    ? "text-left px-6"
+                    ? "text-left pr-12"
                     : "text-center px-6"
                   }`}
               >
