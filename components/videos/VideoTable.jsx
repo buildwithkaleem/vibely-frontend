@@ -118,7 +118,7 @@ export default function VideoTable({
                   ? "text-left pl-12"
                   : item === "Caption"
                     ? "text-left pr-12"
-                    : "text-center px-6"
+                    : "text-center pr-8"
                   }`}
               >
                 {item}
