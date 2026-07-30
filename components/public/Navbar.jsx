@@ -149,9 +149,9 @@ export default function Navbar() {
           </Link>
 
 
-          <button onClick={() => scrollToSection("features")}>Features</button>
+          <button className="cursor-pointer" onClick={() => scrollToSection("features")}>Features</button>
 
-          <button onClick={() => scrollToSection("faq")}>FAQ</button>
+          <button className="cursor-pointer" onClick={() => scrollToSection("faq")}>FAQ</button>
 
           {/* <Link href="/#features">
             Features
