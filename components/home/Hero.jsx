@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="py-28 text-center">
+    <section id="home" className="py-28 text-center">
 
       <h1 className="text-6xl font-bold">
 

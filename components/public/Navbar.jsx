@@ -84,11 +84,9 @@
 
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
-import { usePathname } from "next/navigation";
 
 
 export default function Navbar() {
-  const pathname = usePathname();
 
   const {
     isAuthenticated,
@@ -97,16 +95,6 @@ export default function Navbar() {
   } = useAuth();
 
   if (loading) return null;
-
-  // if (pathname === "/dashboard") {
-  //   return null
-  // }
-  // if ( pathname === "/upload") {
-  //   return null
-  // }
-  // if (pathname === "/videos") {
-  //   return null
-  // }
 
   return (
 
@@ -125,21 +113,21 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-8">
 
-          <Link href="/">
+          <a href="/#home">
             Home
-          </Link>
+          </a>
 
           <Link href="/about">
             About
           </Link>
 
-          <Link href="/#features">
+          <a href="/#features">
             Features
-          </Link>
+          </a>
 
-          <Link href="/#faq">
+          <a href="/#faq">
             FAQ
-          </Link>
+          </a>
 
           <Link href="/contact">
             Contact
