@@ -26,14 +26,14 @@ export default function VideoTable({
 
       <table className="w-full border rounded-xl">
 
-        <thead className="bg-gray-100">
-          {tableHead.map((index,item)=>(
-            <tr key={index}>
-              <th className="p-4">
+            <thead  className="bg-gray-100">
+            <tr >
+          {tableHead.map((item)=>(
+            <th key={item} className="p-4">
                 {item}
               </th>
-            </tr>
           ))}
+            </tr>
           
         </thead>
 
