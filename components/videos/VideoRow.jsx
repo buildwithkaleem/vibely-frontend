@@ -148,7 +148,13 @@ export default function VideoRow({
           </p>
         </td>
 
-        <td className="p-4 align-middle">
+        {/* <td className="p-4 align-middle">
+          <span className="inline-flex rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
+            {video.status || "Draft"}
+          </span>
+        </td> */}
+
+        <td className="p-4 align-middle text-center">
           <span className="inline-flex rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
             {video.status || "Draft"}
           </span>
@@ -160,23 +166,6 @@ export default function VideoRow({
 
         <td className="p-4 align-middle">
 
-          {/* <div className="flex items-center justify-center gap-3">
-
-            <button
-              onClick={() => setShowEdit(true)}
-              className="rounded-lg border border-blue-500 px-4 py-2 text-sm font-medium text-blue-600 transition hover:bg-blue-500 hover:text-white"
-            >
-              Edit
-            </button>
-
-            <button
-              onClick={() => setShowDelete(true)}
-              className="rounded-lg border border-red-500 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-500 hover:text-white"
-            >
-              Delete
-            </button>
-
-          </div> */}
 
           <div className="flex items-center justify-center gap-2">
 

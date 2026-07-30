@@ -8,6 +8,8 @@ export default function VideoTable({
   refresh,
 }) {
 
+  const tableHead = ["Preview", "Caption", "Status", "Date","Actions"]
+
   if (loading)
     return <p>Loading...</p>;
 
@@ -25,31 +27,14 @@ export default function VideoTable({
       <table className="w-full border rounded-xl">
 
         <thead className="bg-gray-100">
-
-          <tr>
-
-            <th className="p-4">
-              Preview
-            </th>
-
-            <th className="p-4">
-              Caption
-            </th>
-
-            <th className="p-4">
-              Status
-            </th>
-
-            <th className="p-4">
-              Date
-            </th>
-
-            <th className="p-4">
-              Actions
-            </th>
-
-          </tr>
-
+          {tableHead.map((index,item)=>(
+            <tr key={index}>
+              <th className="p-4">
+                {item}
+              </th>
+            </tr>
+          ))}
+          
         </thead>
 
         <tbody>
