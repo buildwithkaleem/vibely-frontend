@@ -84,8 +84,11 @@
 
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
+import { usePathname } from "next/navigation";
+
 
 export default function Navbar() {
+  const pathname = usePathname();
 
   const {
     isAuthenticated,
@@ -95,7 +98,19 @@ export default function Navbar() {
 
   if (loading) return null;
 
+  // if (pathname === "/dashboard") {
+  //   return null
+  // }
+  // if ( pathname === "/upload") {
+  //   return null
+  // }
+  // if (pathname === "/videos") {
+  //   return null
+  // }
+
   return (
+
+    // { pathname === "dashboard" && ""}
 
     <header className="sticky top-0 bg-white border-b">
 
