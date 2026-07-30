@@ -115,6 +115,7 @@
 import { useState } from "react";
 import DeleteModal from "./DeleteModal";
 import EditModal from "./EditModal";
+import { Pencil, Trash2 } from "lucide-react";
 
 export default function VideoRow({
   video,
@@ -159,7 +160,7 @@ export default function VideoRow({
 
         <td className="p-4 align-middle">
 
-          <div className="flex items-center justify-center gap-3">
+          {/* <div className="flex items-center justify-center gap-3">
 
             <button
               onClick={() => setShowEdit(true)}
@@ -173,6 +174,26 @@ export default function VideoRow({
               className="rounded-lg border border-red-500 px-4 py-2 text-sm font-medium text-red-600 transition hover:bg-red-500 hover:text-white"
             >
               Delete
+            </button>
+
+          </div> */}
+
+          <div className="flex items-center justify-center gap-2">
+
+            <button
+              onClick={() => setShowEdit(true)}
+              className="rounded-lg border border-blue-500 p-2 text-blue-600 hover:bg-blue-500 hover:text-white transition"
+              title="Edit"
+            >
+              <Pencil size={18} />
+            </button>
+
+            <button
+              onClick={() => setShowDelete(true)}
+              className="rounded-lg border border-red-500 p-2 text-red-600 hover:bg-red-500 hover:text-white transition"
+              title="Delete"
+            >
+              <Trash2 size={18} />
             </button>
 
           </div>
