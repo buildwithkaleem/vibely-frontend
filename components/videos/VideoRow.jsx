@@ -155,12 +155,11 @@ export default function VideoRow({
         </td> */}
 
         <td className="p-4 align-middle text-center">
-          <span className="inline-flex rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
+          {/* <span className="inline-flex rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700"> */}
             {video.status || "Draft"}
-          </span>
+          {/* </span> */}
         </td>
-
-        <td className="p-4 align-middle text-gray-600">
+        <td className="p-4 align-middle text-center text-gray-600">
           {new Date(video.createdAt).toLocaleDateString()}
         </td>
 
