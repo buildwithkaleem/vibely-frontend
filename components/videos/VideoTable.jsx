@@ -93,9 +93,9 @@ export default function VideoTable({
 
         <thead className="bg-gray-100">
 
-          {/* <tr>
+          <tr>
 
-            {tableHead.map((item) => (
+            {/* {tableHead.map((item) => (
 
               <th
                 key={item}
@@ -108,21 +108,29 @@ export default function VideoTable({
                 {item}
               </th>
 
+            ))} */}
+
+            {tableHead.map((item) => (
+
+              <th
+                key={item}
+                className={`py-4 font-semibold text-gray-700 ${item === "Preview"
+                  ? "text-left pl-8"
+                  : item === "Caption"
+                    ? "text-left px-6"
+                    : "text-center px-6"
+                  }`}
+              >
+                {item}
+              </th>
+
             ))}
 
-          </tr> */}
+            
 
-          <th
-            key={item}
-            className={`py-4 font-semibold text-gray-700 ${item === "Preview"
-                ? "text-left pl-8"
-                : item === "Caption"
-                  ? "text-left px-6"
-                  : "text-center px-6"
-              }`}
-          >
-            {item}
-          </th>
+          </tr>
+
+          
 
         </thead>
 
