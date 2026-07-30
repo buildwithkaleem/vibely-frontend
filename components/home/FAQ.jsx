@@ -15,7 +15,8 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-20">
+    <section id="faq"
+     className="py-20">
 
       <div className="max-w-5xl mx-auto px-6">
 

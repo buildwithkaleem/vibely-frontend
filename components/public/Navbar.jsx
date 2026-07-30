@@ -84,9 +84,11 @@
 
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
-
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const router = useRouter();
 
   const {
     isAuthenticated,
@@ -94,11 +96,21 @@ export default function Navbar() {
     loading,
   } = useAuth();
 
+  const scrollToSection = (id) => {
+    if (pathname !== "/" || pathname === "/" ) {
+      router.push(`/#${id}`);
+      return;
+    }
+
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   if (loading) return null;
 
   return (
 
-    // { pathname === "dashboard" && ""}
 
     <header className="sticky top-0 bg-white border-b">
 
@@ -113,21 +125,41 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-8">
 
-          <a href="/#home">
+          <Link
+            href="/"
+            onClick={() => {
+              if (window.location.pathname === "/") {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
             Home
-          </a>
+          </Link>
+
+
+          {/* <a href="/#home">
+            Home
+          </a> */}
 
           <Link href="/about">
             About
           </Link>
 
-          <a href="/#features">
+
+          <button onClick={() => scrollToSection("features")}>Features</button>
+
+          <button onClick={() => scrollToSection("faq")}>FAQ</button>
+
+          {/* <Link href="/#features">
             Features
-          </a>
+          </Link>
 
           <a href="/#faq">
             FAQ
-          </a>
+          </a> */}
 
           <Link href="/contact">
             Contact
