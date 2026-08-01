@@ -138,88 +138,262 @@
 
 
 
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
-// import DashboardLayout from "@/components/layout/DashboardLayout";
-import StatCard from "@/components/dashboard/StatCard";
-import api from "@/services/axios";
+// import { useEffect, useState } from "react";
+// // import DashboardLayout from "@/components/layout/DashboardLayout";
+// import StatCard from "@/components/dashboard/StatCard";
+// import api from "@/services/axios";
 
-export default function Dashboard() {
+// export default function Dashboard() {
 
-  const [user, setUser] = useState(null);
-  const [videos, setVideos] = useState([]);
+//   const [user, setUser] = useState(null);
+//   const [videos, setVideos] = useState([]);
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    load();
+//     load();
 
-  }, []);
+//   }, []);
 
-  async function load() {
+//   async function load() {
 
-    const me = await api.get("api/users/me");
+//     const me = await api.get("api/users/me");
 
-    setUser(me.data.user);
+//     setUser(me.data.user);
 
-    const list = await api.get("/api/videos/");
+//     const list = await api.get("/api/videos/");
 
-    setVideos(list.data.videos);
+//     setVideos(list.data.videos);
 
-  }
+//   }
 
-  return (
+//   return (
 
-    // <DashboardLayout>
+//     // <DashboardLayout>
 
-      <>
-        <div className="flex items-center gap-5 mb-5">
+//       <>
+//         <div className="flex items-center gap-5 mb-5">
 
-        {/* <h1 className="text-4xl font-bold mb-10">
+//         {/* <h1 className="text-4xl font-bold mb-10">
 
-          Welcome
-        </h1> */}
+//           Welcome
+//         </h1> */}
 
-          <img
-            src={user?.avatar}
-            alt={user?.displayName}
-            className="w-15 h-15 rounded-full"
-          />
+//           <img
+//             src={user?.avatar}
+//             alt={user?.displayName}
+//             className="w-15 h-15 rounded-full"
+//           />
 
-          <div>
-            <h1 className="text-3xl font-bold mb-2">
-              {user?.displayName}
-            </h1>
+//           <div>
+//             <h1 className="text-3xl font-bold mb-2">
+//               {user?.displayName}
+//             </h1>
 
-            <p>{user?.openId}</p>
-          </div>
+//             <p>{user?.openId}</p>
+//           </div>
 
-        </div>
+//         </div>
 
 
      
 
-      <div className="grid md:grid-cols-3 gap-6">
+//       <div className="grid md:grid-cols-3 gap-6">
+
+//         <StatCard
+//           title="Total Videos"
+//           value={videos.length}
+//         />
+
+//         <StatCard
+//           title="TikTok"
+//           value="Connected"
+//         />
+
+//         <StatCard
+//           title="Draft Status"
+//           value="Ready"
+//         />
+
+//       </div>
+//     </>
+//     // </DashboardLayout> 
+
+//   );
+
+// }
+
+
+
+
+
+"use client";
+
+import { useEffect, useState } from "react";
+import {
+  Video,
+  CheckCircle2,
+  FileVideo,
+  UserCircle2,
+} from "lucide-react";
+
+import StatCard from "@/components/dashboard/StatCard";
+import api from "@/services/axios";
+
+export default function Dashboard() {
+  const [user, setUser] = useState(null);
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    load();
+  }, []);
+
+  async function load() {
+    try {
+      const me = await api.get("/api/users/me");
+      setUser(me.data.user);
+
+      const list = await api.get("/api/videos");
+      setVideos(list.data.videos);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  const totalVideos = videos.length;
+
+  const publishedVideos = videos.filter(
+    (v) => v.status === "Published"
+  ).length;
+
+  const draftVideos = videos.filter(
+    (v) => v.status === "Draft"
+  ).length;
+
+  return (
+    <div className="space-y-8">
+
+      {/* Welcome */}
+
+      <div className="rounded-2xl bg-gradient-to-r from-black to-gray-800 p-8 text-white">
+
+        <div className="flex items-center gap-5">
+
+          <img
+            src={user?.avatar}
+            alt={user?.displayName}
+            className="h-20 w-20 rounded-full border-4 border-white object-cover"
+          />
+
+          <div>
+
+            <h1 className="text-3xl font-bold">
+              Welcome, {user?.displayName}
+            </h1>
+
+            <p className="mt-2 text-gray-300">
+              Your TikTok account is connected successfully.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Stats */}
+
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
         <StatCard
           title="Total Videos"
-          value={videos.length}
+          value={totalVideos}
+          icon={<Video size={24} />}
+        />
+
+        <StatCard
+          title="Published"
+          value={publishedVideos}
+          icon={<CheckCircle2 size={24} />}
+        />
+
+        <StatCard
+          title="Draft"
+          value={draftVideos}
+          icon={<FileVideo size={24} />}
         />
 
         <StatCard
           title="TikTok"
           value="Connected"
-        />
-
-        <StatCard
-          title="Draft Status"
-          value="Ready"
+          icon={<UserCircle2 size={24} />}
         />
 
       </div>
-    </>
-    // </DashboardLayout> 
 
+      {/* Recent Uploads */}
+
+      <div className="rounded-2xl border bg-white p-6 shadow-sm">
+
+        <h2 className="mb-6 text-2xl font-bold">
+          Recent Uploads
+        </h2>
+
+        {videos.length === 0 ? (
+
+          <p className="text-gray-500">
+            No videos uploaded yet.
+          </p>
+
+        ) : (
+
+          <div className="space-y-4">
+
+            {videos.slice(0, 5).map((video) => (
+
+              <div
+                key={video._id}
+                className="flex items-center justify-between rounded-xl border p-4"
+              >
+
+                <div className="flex items-center gap-4">
+
+                  <video
+                    src={video.cloudinaryUrl}
+                    className="h-16 w-24 rounded-lg object-cover"
+                  />
+
+                  <div>
+
+                    <h3 className="font-semibold">
+                      {video.caption || "Untitled Video"}
+                    </h3>
+
+                    <p className="text-sm text-gray-500">
+                      {new Date(
+                        video.createdAt
+                      ).toLocaleDateString()}
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <span className="rounded-full bg-green-100 px-3 py-1 text-sm text-green-700">
+                  {video.status}
+                </span>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        )}
+
+      </div>
+
+    </div>
   );
-
 }
