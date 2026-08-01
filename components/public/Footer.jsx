@@ -216,6 +216,10 @@ export default function Footer() {
           </p>
 
           <p>
+            Powered by the Official TikTok Content Posting API.
+          </p>
+
+          <p>
             Built using the Official TikTok API.
           </p>
 
