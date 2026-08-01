@@ -5,6 +5,7 @@ import api from "@/services/axios";
 import { uploadToCloudinary } from "@/services/cloudinary";
 import VideoPreview from "./VideoPreview";
 import UploadProgress from "./UploadProgress";
+import { toast } from "sonner";
 
 export default function UploadForm() {
   const [file, setFile] = useState(null);
@@ -14,7 +15,8 @@ export default function UploadForm() {
 
   const handlePublish = async () => {
     if (!file) {
-      alert("Please select a video");
+      // alert("Please select a video");
+      toast.info("Please select a video");
       return;
     }
 
@@ -36,7 +38,8 @@ export default function UploadForm() {
         }
       );
 
-      alert("Video sent to TikTok successfully!");
+      // alert("Video sent to TikTok successfully!");
+      toast.success("Video sent to TikTok successfully!");
 
       console.log(data);
 
@@ -46,10 +49,12 @@ export default function UploadForm() {
     } catch (err) {
       console.log(err);
 
-      alert(
-        err.response?.data?.message ||
-        "Upload failed"
-      );
+      // alert(
+      //   err.response?.data?.message ||
+      //   "Upload failed"
+      // );
+      toast.error(err.response?.data?.message ||
+        "Upload failed");
     } finally {
       setLoading(false);
     }

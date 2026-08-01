@@ -70,6 +70,7 @@ import Footer from "@/components/public/Footer";
 import "./globals.css";
 
 import { AuthProvider } from "@/context/AuthContext";
+import { Toaster } from "sonner";
 
 export const metadata = {
   metadataBase: new URL("https://vibely.egrif.online"),
@@ -147,7 +148,7 @@ export default function RootLayout({
       <body>
 
         <AuthProvider>
-
+          <Toaster richColors position="top-right" />
           {children}
           <Footer />
         </AuthProvider>
