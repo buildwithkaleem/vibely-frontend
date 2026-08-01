@@ -84,6 +84,10 @@ import { useEffect, useState } from "react";
 import VideoTable from "@/components/videos/VideoTable";
 import { getVideos } from "@/services/video.service";
 
+export const metadata = {
+  title: "My Videos",
+};
+
 export default function VideosPage() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);

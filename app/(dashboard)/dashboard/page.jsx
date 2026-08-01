@@ -241,6 +241,10 @@ import {
 import StatCard from "@/components/dashboard/StatCard";
 import api from "@/services/axios";
 
+export const metadata = {
+  title: "Dashboard",
+};
+
 export default function Dashboard() {
   const [user, setUser] = useState(null);
   const [videos, setVideos] = useState([]);

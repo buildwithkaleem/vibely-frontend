@@ -185,6 +185,10 @@ import WhyChoose from "@/components/home/WhyChoose";
 import FAQ from "@/components/home/FAQ";
 import CTA from "@/components/home/CTA";
 
+export const metadata = {
+  title: "Home",
+};
+
 export default function Home() {
   return (
     <>

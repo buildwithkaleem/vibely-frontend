@@ -71,6 +71,73 @@ import "./globals.css";
 
 import { AuthProvider } from "@/context/AuthContext";
 
+export const metadata = {
+  metadataBase: new URL("https://vibely.egrif.online"),
+
+  title: {
+    default: "Vibely",
+    template: "%s | Vibely",
+  },
+
+  description:
+    "Vibely is a secure TikTok publishing platform that allows creators and businesses to upload and manage videos using the official TikTok API.",
+
+  keywords: [
+    "TikTok",
+    "TikTok API",
+    "Content Posting API",
+    "Video Upload",
+    "Social Media",
+    "Vibely",
+  ],
+
+  authors: [
+    {
+      name: "Vibely",
+    },
+  ],
+
+  creator: "Vibely",
+
+  publisher: "Vibely",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Vibely",
+    description:
+      "Official TikTok publishing platform for creators.",
+    url: "https://vibely.egrif.online",
+    siteName: "Vibely",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Vibely",
+    description:
+      "Upload videos using the official TikTok API.",
+    images: ["/og-image.png"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
+
 export default function RootLayout({
   children,
 }) {
