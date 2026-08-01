@@ -209,9 +209,9 @@
 // import DashboardLayout from "@/components/layout/DashboardLayout";
 import UploadForm from "@/components/upload/UploadForm";
 
-export const metadata = {
-  title: "Upload Video",
-};
+// export const metadata = {
+//   title: "Upload Video",
+// };
 
 export default function UploadPage() {
   return (
