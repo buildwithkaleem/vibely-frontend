@@ -66,6 +66,7 @@
 
 
 
+import Footer from "@/components/public/Footer";
 import "./globals.css";
 
 import { AuthProvider } from "@/context/AuthContext";
@@ -81,7 +82,7 @@ export default function RootLayout({
         <AuthProvider>
 
           {children}
-
+          <Footer />
         </AuthProvider>
 
       </body>
