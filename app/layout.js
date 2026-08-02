@@ -66,7 +66,7 @@
 
 
 
-import Footer from "@/components/public/Footer";
+// import Footer from "@/components/public/Footer";
 import "./globals.css";
 
 import { AuthProvider } from "@/context/AuthContext";
@@ -150,7 +150,7 @@ export default function RootLayout({
         <AuthProvider>
           <Toaster richColors position="top-right" />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </AuthProvider>
 
       </body>
