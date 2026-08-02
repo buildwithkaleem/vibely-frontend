@@ -37,7 +37,22 @@ export default function Sidebar() {
     <aside className="w-64 min-h-screen bg-gray-900 text-white">
 
       <div className="text-3xl font-bold p-6 border-b border-gray-700">
-        Vibely
+        {/* Vibely */}
+        <Link href="/" className="flex items-center">
+        
+                  <Image
+                    src="/vibely-logo.png"
+                    alt="Vibely Logo"
+                    width={42}
+                    height={42}
+                    priority
+                  />
+        
+                  <span className="text-2xl font-bold">
+                    Vibely
+                  </span>
+        
+                </Link>
       </div>
 
       <nav className="flex flex-col">

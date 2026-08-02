@@ -85,6 +85,7 @@
 import Link from "next/link";
 import { useAuth } from "@/hooks/useAuth";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -116,11 +117,20 @@ export default function Navbar() {
 
       <div className="mx-auto max-w-7xl h-16 flex justify-between items-center px-6">
 
-        <Link
-          href="/"
-          className="text-2xl font-bold"
-        >
-          Vibely
+        <Link href="/" className="flex items-center">
+
+          <Image
+            src="/vibely-logo.png"
+            alt="Vibely Logo"
+            width={42}
+            height={42}
+            priority
+          />
+
+          <span className="text-2xl font-bold">
+            Vibely
+          </span>
+
         </Link>
 
         <nav className="hidden md:flex gap-8">
