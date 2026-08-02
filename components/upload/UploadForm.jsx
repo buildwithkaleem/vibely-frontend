@@ -16,7 +16,7 @@ export default function UploadForm() {
   const handlePublish = async () => {
     if (!file) {
       // alert("Please select a video");
-      toast.info("Please select a video");
+      toast.warning("Please select a video");
       return;
     }
 

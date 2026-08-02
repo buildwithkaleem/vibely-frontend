@@ -67,6 +67,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
 
 export default function CallbackPage() {
   const router = useRouter();
@@ -80,6 +81,9 @@ export default function CallbackPage() {
 
     if (token) {
       login(token);
+      toast.success(
+        "Successfully logged in."
+      );
       router.replace("/dashboard");
     } else {
       router.replace("/");

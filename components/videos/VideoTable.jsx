@@ -65,6 +65,7 @@
 
 "use client";
 
+import EmptyState from "./EmptyState";
 import VideoRow from "./VideoRow";
 
 export default function VideoTable({
@@ -83,7 +84,9 @@ export default function VideoTable({
   if (loading) return <p>Loading...</p>;
 
   if (!videos.length) {
-    return <p>No videos uploaded yet.</p>;
+
+    return <EmptyState />;
+
   }
 
   return (

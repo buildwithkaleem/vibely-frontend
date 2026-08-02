@@ -1,6 +1,7 @@
 "use client";
 
 import { deleteVideo } from "@/services/video.service";
+// import { toast } from "sonner";
 
 export default function DeleteModal({
   video,
@@ -11,6 +12,10 @@ export default function DeleteModal({
   const remove = async () => {
 
     await deleteVideo(video._id);
+
+    // toast.success(
+    //   "Video deleted successfully."
+    // );
 
     refresh();
 

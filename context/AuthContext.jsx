@@ -6,6 +6,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import { toast } from "sonner";
 
 const AuthContext = createContext();
 
@@ -31,6 +32,7 @@ export function AuthProvider({ children }) {
   const logout = () => {
     localStorage.removeItem("token");
     setToken(null);
+    toast.success("Logged out.");
     window.location.href = "/";
   };
 
