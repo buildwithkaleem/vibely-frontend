@@ -114,16 +114,16 @@ const links = [
     href: "/videos",
     icon: Video,
   },
-  {
-    name: "Profile",
-    href: "/profile",
-    icon: User,
-  },
-  {
-    name: "Settings",
-    href: "/settings",
-    icon: Settings,
-  },
+  // {
+  //   name: "Profile",
+  //   href: "/profile",
+  //   icon: User,
+  // },
+  // {
+  //   name: "Settings",
+  //   href: "/settings",
+  //   icon: Settings,
+  // },
 ];
 
 export default function Sidebar({
