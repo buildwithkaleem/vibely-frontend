@@ -178,7 +178,7 @@ export default function Sidebar({
 
           <Link
             href="/"
-            className="flex items-center gap-3 overflow-hidden"
+            className="flex items-center gap-2 overflow-hidden"
           >
             <Image
               src="/vibely-logo.png"

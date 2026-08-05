@@ -165,7 +165,7 @@ export default function Navbar() {
 
         <Link
           href="/"
-          className="flex items-center"
+          className="flex items-center gap-2"
         >
           <Image
             src="/vibely-logo.png"
