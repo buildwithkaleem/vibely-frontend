@@ -256,7 +256,6 @@ export default function Dashboard() {
   async function load() {
     try {
       const me = await api.get("/api/users/me");
-      console.log(me.data.user);
       
       setUser(me.data.user);
 
@@ -286,10 +285,19 @@ export default function Dashboard() {
 
         <div className="flex items-center gap-5">
 
-          <img
+          {/* <img
             src={user?.avatar}
             alt={user?.displayName}
             className="h-20 w-20 rounded-full border-4 border-white object-cover"
+          /> */}
+
+          <img
+            src={user?.avatar || "/assets/tiktok_video_7E3fo.jpeg"}
+            alt={user?.displayName}
+            className="h-20 w-20 rounded-full border-4 border-white object-cover"
+            onError={(e) => {
+              e.currentTarget.src = "/assets/tiktok_video_7E3fo.jpeg";
+            }}
           />
 
           <div>
