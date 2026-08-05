@@ -256,6 +256,8 @@ export default function Dashboard() {
   async function load() {
     try {
       const me = await api.get("/api/users/me");
+      console.log(me.data.user);
+      
       setUser(me.data.user);
 
       const list = await api.get("/api/videos");
