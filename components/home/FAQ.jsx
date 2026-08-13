@@ -1,12 +1,12 @@
 export default function FAQ() {
   const faqs = [
     {
-      q: "What is Vibely?",
-      a: "Vibely is a platform that helps creators upload videos using the official TikTok API.",
+      q: "What is Vibeli?",
+      a: "Vibeli is a platform that helps creators upload videos using the official TikTok API.",
     },
     {
-      q: "Is Vibely safe?",
-      a: "Yes. Vibely uses TikTok OAuth and never asks for your TikTok password.",
+      q: "Is Vibeli safe?",
+      a: "Yes. Vibeli uses TikTok OAuth and never asks for your TikTok password.",
     },
     {
       q: "Can I disconnect my account?",

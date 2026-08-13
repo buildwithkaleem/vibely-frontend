@@ -64,11 +64,11 @@ export default function Footer() {
             href="/"
             className="text-3xl font-bold text-white"
           >
-            Vibely
+            Vibeli
           </Link>
 
           <p className="mt-5 leading-7 text-gray-400">
-            Vibely is a modern TikTok publishing platform that helps creators
+            Vibeli is a modern TikTok publishing platform that helps creators
             and businesses securely upload and manage videos using the official
             TikTok API.
           </p>
@@ -177,12 +177,12 @@ export default function Footer() {
               </p>
 
               <a
-                href="https://vibely.egrif.online"
+                href="https://vibeli.egrif.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="break-all hover:text-white"
               >
-                vibely.egrif.online
+                vibeli.egrif.online
               </a>
 
             </div>
@@ -212,7 +212,7 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-gray-500 md:flex-row">
 
           <p>
-            © {year} Vibely. All rights reserved.
+            © {year} Vibeli. All rights reserved.
           </p>
 
           <p>

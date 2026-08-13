@@ -182,14 +182,14 @@ export default function Sidebar({
           >
             <Image
               src="/vibely-logo.png"
-              alt="Vibely"
+              alt="Vibeli"
               width={40}
               height={40}
             />
 
             {!collapsed && (
               <span className="text-2xl font-bold whitespace-nowrap">
-                Vibely
+                Vibeli
               </span>
             )}
           </Link>

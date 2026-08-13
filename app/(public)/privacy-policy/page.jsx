@@ -118,7 +118,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely respects your privacy and is committed to protecting your
+              Vibeli respects your privacy and is committed to protecting your
               personal information. This Privacy Policy explains how we collect,
               use, store, and protect your information when you use our
               platform.
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
               </li>
 
               <li>
-                Videos you choose to upload through Vibely.
+                Videos you choose to upload through Vibeli.
               </li>
 
               <li>
@@ -182,7 +182,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely uses the official TikTok OAuth authentication system.
+              Vibeli uses the official TikTok OAuth authentication system.
               We only access the permissions that you explicitly grant.
               We never access your TikTok account without your consent.
             </p>
@@ -196,7 +196,7 @@ export default function PrivacyPolicyPage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely does not sell or rent your personal information.
+              Vibeli does not sell or rent your personal information.
               Your information is only shared when necessary to provide the
               services you request or when required by law.
             </p>

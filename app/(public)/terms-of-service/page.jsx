@@ -102,7 +102,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              By accessing or using Vibely, you agree to these Terms of
+              By accessing or using Vibeli, you agree to these Terms of
               Service. If you do not agree with these terms, please do not
               use our platform.
             </p>
@@ -116,7 +116,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely allows users to securely connect their TikTok accounts
+              Vibeli allows users to securely connect their TikTok accounts
               using the official TikTok OAuth system and publish videos
               through the official TikTok Content Posting API.
             </p>
@@ -133,7 +133,7 @@ export default function TermsOfServicePage() {
 
               <li>Provide accurate account information.</li>
 
-              <li>Use Vibely only for lawful purposes.</li>
+              <li>Use Vibeli only for lawful purposes.</li>
 
               <li>Respect TikTok Community Guidelines.</li>
 
@@ -159,7 +159,7 @@ export default function TermsOfServicePage() {
 
               <li>Violating TikTok Platform policies.</li>
 
-              <li>Using Vibely for illegal activities.</li>
+              <li>Using Vibeli for illegal activities.</li>
 
             </ul>
 
@@ -172,7 +172,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely, its branding, design, and software are protected by
+              Vibeli, its branding, design, and software are protected by
               intellectual property laws. Users retain ownership of the
               content they upload.
             </p>
@@ -200,7 +200,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely integrates with third-party services such as TikTok.
+              Vibeli integrates with third-party services such as TikTok.
               Your use of those services is also subject to their respective
               terms and privacy policies.
             </p>
@@ -214,7 +214,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely is provided on an "as is" and "as available" basis.
+              Vibeli is provided on an "as is" and "as available" basis.
               We do not guarantee uninterrupted service or that the platform
               will always be error-free.
             </p>
@@ -228,7 +228,7 @@ export default function TermsOfServicePage() {
             </h2>
 
             <p className="mt-3 leading-8 text-gray-600">
-              Vibely shall not be liable for any indirect, incidental,
+              Vibeli shall not be liable for any indirect, incidental,
               special, or consequential damages resulting from the use of
               our services.
             </p>
@@ -243,7 +243,7 @@ export default function TermsOfServicePage() {
 
             <p className="mt-3 leading-8 text-gray-600">
               We may update these Terms of Service from time to time.
-              Continued use of Vibely after updates constitutes acceptance
+              Continued use of Vibeli after updates constitutes acceptance
               of the revised terms.
             </p>
 

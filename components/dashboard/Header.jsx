@@ -177,7 +177,7 @@ export default function Header({
           <div className="hidden md:block">
 
             <p className="font-semibold">
-              Vibely User
+              Vibeli User
             </p>
 
             <p className="text-xs text-gray-500">

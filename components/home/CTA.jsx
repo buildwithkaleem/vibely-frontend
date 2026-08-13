@@ -13,7 +13,7 @@ export default function CTA() {
         </p>
 
         <a
-          href="https://vibely-api.egrif.online/api/auth/login"
+          href="https://vibeli-api.egrif.online/api/auth/login"
           className="inline-block mt-10 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold"
         >
           Continue with TikTok

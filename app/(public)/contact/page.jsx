@@ -63,7 +63,7 @@ export default function ContactPage() {
       <section className="mx-auto max-w-6xl px-6 py-16 text-center">
 
         <h1 className="text-5xl font-bold text-gray-900">
-          Contact Vibely
+          Contact Vibeli
         </h1>
 
         <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-600">
@@ -124,12 +124,12 @@ export default function ContactPage() {
               </h3>
 
               <a
-                href="https://vibely.egrif.online"
+                href="https://vibeli.egrif.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-block break-all text-blue-600 hover:underline"
               >
-                https://vibely.egrif.online
+                https://vibeli.egrif.online
               </a>
 
             </div>

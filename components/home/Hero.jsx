@@ -20,12 +20,12 @@ export default function Hero() {
 
       <p className="mt-8 text-xl text-gray-600 max-w-3xl mx-auto">
 
-        Vibely helps creators securely upload videos to TikTok using the official Content Posting API.
+        Vibeli helps creators securely upload videos to TikTok using the official Content Posting API.
 
       </p>
 
       <a
-        href="https://vibely-api.egrif.online/api/auth/login"
+        href="https://vibeli-api.egrif.online/api/auth/login"
         className="inline-block mt-10 rounded-xl bg-black px-8 py-4 text-lg text-white"
       >
         Continue with TikTok

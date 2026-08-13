@@ -6,6 +6,6 @@ export default function robots() {
     },
 
     sitemap:
-      "https://vibely.egrif.online/sitemap.xml",
+      "https://vibeli.egrif.online/sitemap.xml",
   };
 }

@@ -5,7 +5,7 @@ export default function WhyChoose() {
       <div className="max-w-6xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center">
-          Why Choose Vibely?
+          Why Choose Vibeli?
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10 mt-14">

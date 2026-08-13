@@ -169,13 +169,13 @@ export default function Navbar() {
         >
           <Image
             src="/vibely-logo.png"
-            alt="Vibely"
+            alt="Vibeli"
             width={40}
             height={40}
           />
 
           <span className="text-2xl font-bold">
-            Vibely
+            Vibeli
           </span>
         </Link>
 
@@ -200,7 +200,7 @@ export default function Navbar() {
           {!isAuthenticated ? (
 
             <a
-              href="https://vibely-api.egrif.online/api/auth/login"
+              href="https://vibeli-api.egrif.online/api/auth/login"
               className="rounded-lg bg-black px-5 py-2 text-white"
             >
               Login
@@ -292,7 +292,7 @@ export default function Navbar() {
             {!isAuthenticated ? (
 
               <a
-                href="https://vibely-api.egrif.online/api/auth/login"
+                href="https://vibeli-api.egrif.online/api/auth/login"
                 className="rounded-lg bg-black py-3 text-center text-white"
               >
                 Login with TikTok
