@@ -48,6 +48,7 @@ export default function UploadForm() {
       setProgress(0);
     } catch (err) {
       console.log(err);
+      console.log(err.response?.data);
 
       // alert(
       //   err.response?.data?.message ||
